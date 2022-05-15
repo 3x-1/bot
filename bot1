@@ -1,0 +1,11 @@
+bot = telebot.TeleBot('5366002265:AAEynoO8D4Czkb9hA9wB4JriZABauzb2Hdo')
+
+@bot.message_handler(commands=['start'])
+def start(m, res=False):
+    bot.send_message(m.chat.id, 'Я на связи. Напиши мне что-нибудь')
+
+@bot.message_handler(contet_types=['text'])
+def handle_text(message):
+    bot.send_message(message.chat.id, 'Вы написали' + message.text)
+
+bot.polling(none_stop = True, intert.me/God_of_mimic_botval = 0)
